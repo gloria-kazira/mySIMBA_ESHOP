@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Buy Products| Ishop </title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../static/footer.css"> -->
+
+
+    <script src="../static/index.js"></script>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.js"></script>
+
+</head>
+
+
+<body>
+    <header>
+        {%include 'navbar.html'%}
+    </header>
+
+    <div class="container bg-info pt-2">
+        <h3 class="bg-warning p-3 mt-2 text-white">heels</h3>
+        <section class="row">
+            {% for heels in heels %}
+            <div class="col-md-4">
+                <div class="card shadow my-2">
+                    <img src="../static/products/{{heels[8]}}" alt="" width="100%" height="300px"
+                        style="border-radius: 15px;">
+                    <h4 class="text-center text-danger">{{heels[1]}}</h4>
+                    <p class="badge bg-warning text-center">{{heels[6]}}</p>
+                    <h5 class="text-center">Kshs {{heels[3]}}</h5>
+
+                    <a href="/single_item/{{heels[0]}}" class="btn btn-success">View Product</a>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </section>
+        <br>
+
+        <h3 class="bg-warning p-3 mt-2 text-white"></h3>
+        <section class="row">
+            {% for cake in cake %}
+            <div class="col-md-4">
+                <div class="card shadow my-2">
+                    <img src="../static/products/{{cake[8]}}" alt="" width="100%" height="300px"
+                        style="border-radius: 15px;">
+                    <h4 class="text-center text-danger">{{cake[1]}}</h4>
+                    <p class="badge bg-warning text-center">{{cake[6]}}</p>
+                    <h5 class="text-center">Kshs {{cake[3]}}</h5>
+
+                    <a href="/single_item/{{cake[0]}}" class="btn btn-success">View Product</a>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </section>
+<br>
+
+<h3 class="bg-warning p-3 mt-2 text-white"></h3>
+<section class="row">
+    {% for fruits in fruits %}
+    <div class="col-md-4">
+        <div class="card shadow my-2">
+            <img src="../static/products/{{fruits[8]}}" alt="" width="100%" height="300px"
+                style="border-radius: 15px;">
+            <h4 class="text-center text-danger">{{fruits[1]}}</h4>
+            <p class="badge bg-warning text-center">{{fruits[6]}}</p>
+            <h5 class="text-center">Kshs {{fruits[3]}}</h5>
+
+            <a href="/single_item/{{fruits[0]}}" class="btn btn-success">View Product</a>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</section>
+<br>
+<h3 class="bg-warning p-3 mt-2 text-white"></h3>
+<section class="row">
+    {% for shoes in shoes %}
+    <div class="col-md-4">
+        <div class="card shadow my-2">
+            <img src="../static/products/{{shoes[8]}}" alt="" width="100%" height="300px"
+                style="border-radius: 15px;">
+            <h4 class="text-center text-danger">{{shoes[1]}}</h4>
+            <p class="badge bg-warning text-center">{{shoes[6]}}</p>
+            <h5 class="text-center">Kshs {{shoes[3]}}</h5>
+
+            <a href="/single_item/{{shoes[0]}}" class="btn btn-success">View Product</a>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</section>
+
+<section>
+    {%include 'footer.html'%}
+</section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
