@@ -117,6 +117,8 @@ def add_product():
           product_name=request.form['name']
           product_desc=request.form['desc']
           product_cost=request.form['cost']
+
+          
           product_discount=request.form['discount']
           product_category=request.form['category']
           product_brand=request.form['brand']
